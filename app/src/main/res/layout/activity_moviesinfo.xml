@@ -20,6 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tabIndicatorColor="@color/purple_200"
+        app:tabMode="scrollable"
         app:tabTextColor="#FFFFFF">
 
         <com.google.android.material.tabs.TabItem

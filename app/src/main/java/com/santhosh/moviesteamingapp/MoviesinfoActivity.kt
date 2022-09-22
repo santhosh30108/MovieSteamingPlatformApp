@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.model.Model
 import com.google.android.material.tabs.TabItem
 import com.google.android.material.tabs.TabLayout
 import com.santhosh.moviesteamingapp.adapters.fragmentsAdapter

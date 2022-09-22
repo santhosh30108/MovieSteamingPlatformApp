@@ -7,11 +7,13 @@
     tools:context=".DescriptionFragment">
 
     <TextView
+        android:id="@+id/Description"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:gravity="left"
+        android:padding="10dp"
         android:text="Description Fragment"
         android:textColor="@color/white"
-        android:textSize="20sp" />
+        android:textSize="16sp" />
 
 </FrameLayout>

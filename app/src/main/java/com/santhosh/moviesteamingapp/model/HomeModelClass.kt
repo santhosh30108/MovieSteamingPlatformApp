@@ -1,5 +1,6 @@
 package com.santhosh.moviesteamingapp.model
 
+import com.santhosh.moviesteamingapp.DescriptionFragment
 
 
 data class HomeModelClass(
@@ -8,7 +9,7 @@ data class HomeModelClass(
      var image: String,
      var name: String,
      var year: String,
-     var genre:String
+     var genre:String,
 ) {
 
 
