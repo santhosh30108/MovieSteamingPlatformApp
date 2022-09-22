@@ -39,6 +39,7 @@ class MoviesinfoActivity : AppCompatActivity() {
         runtime = findViewById(R.id.runtimeActivity2)
         year = findViewById(R.id.yearActivity2)
 
+
         tablayout.setupWithViewPager(viewPager)
         val adapter = fragmentsAdapter(supportFragmentManager,FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
         adapter.addFragment(DescriptionFragment(),"DESCRIPTION")
@@ -61,6 +62,8 @@ class MoviesinfoActivity : AppCompatActivity() {
         genre.text = intent.getStringExtra("genre")
         year.text = intent.getStringExtra("year")
         runtime.text = intent.getStringExtra("runtime")
+
+
 
     }
 

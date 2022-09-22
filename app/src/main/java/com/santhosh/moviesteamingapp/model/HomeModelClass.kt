@@ -10,6 +10,7 @@ data class HomeModelClass(
      var name: String,
      var year: String,
      var genre:String,
+     var description:String
 ) {
 
 
