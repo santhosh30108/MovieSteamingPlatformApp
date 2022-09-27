@@ -28,7 +28,6 @@ class TrailerFragment : Fragment() {
         mediaController.setAnchorView(videoView);
         mediaController.setMediaPlayer(videoView);
         videoView.setMediaController(mediaController);
-        videoView.start()
 //        var mp = MediaPlayer()
 //        mp.setDataSource(url)
 //        mp.prepare()
