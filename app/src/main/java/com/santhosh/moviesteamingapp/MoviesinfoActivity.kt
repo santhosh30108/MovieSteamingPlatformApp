@@ -2,20 +2,13 @@ package com.santhosh.moviesteamingapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.ParcelFileDescriptor
-import android.widget.FrameLayout
 import android.widget.ImageView
-import android.widget.TableLayout
 import android.widget.TextView
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
-import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.model.Model
-import com.google.android.material.tabs.TabItem
 import com.google.android.material.tabs.TabLayout
 import com.santhosh.moviesteamingapp.adapters.fragmentsAdapter
-import com.santhosh.moviesteamingapp.model.HomeModelClass
 
 class MoviesinfoActivity : AppCompatActivity() {
 
@@ -26,6 +19,7 @@ class MoviesinfoActivity : AppCompatActivity() {
     lateinit var genre:TextView
     lateinit var runtime:TextView
     lateinit var year:TextView
+    lateinit var adapter:fragmentsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +35,7 @@ class MoviesinfoActivity : AppCompatActivity() {
 
 
         tablayout.setupWithViewPager(viewPager)
-        val adapter = fragmentsAdapter(supportFragmentManager,FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
+        adapter = fragmentsAdapter(supportFragmentManager,FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
         adapter.addFragment(DescriptionFragment(),"DESCRIPTION")
         adapter.addFragment(CastFragment(),"CAST")
         adapter.addFragment(TrailerFragment(),"TRAILERS")
@@ -58,19 +52,10 @@ class MoviesinfoActivity : AppCompatActivity() {
         genre.text = intent.getStringExtra("genre")
         year.text = intent.getStringExtra("year")
         runtime.text = intent.getStringExtra("runtime")
-        var description = intent.getStringExtra("description")
-
-        var bundle = Bundle()
-        bundle.putString("description",description)
-        val descriptionFragment = DescriptionFragment()
-        descriptionFragment.arguments = bundle
-
-
-
-
-
 
 
     }
+
+
 
 }

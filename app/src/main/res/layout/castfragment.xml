@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/castCardView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="#2b2b2b"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#2b2b2b">
+
+        <ImageView
+            android:id="@+id/actorImage"
+            android:layout_width="180dp"
+            android:layout_height="151dp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/charecterName"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="2dp"
+            android:gravity="center"
+            android:text="Charecter Name"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/actorImage"
+            app:layout_constraintTop_toBottomOf="@+id/actorName" />
+
+        <TextView
+            android:id="@+id/actorName"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/charecterName"
+            app:layout_constraintStart_toStartOf="@+id/charecterName"
+            app:layout_constraintTop_toBottomOf="@+id/actorImage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
