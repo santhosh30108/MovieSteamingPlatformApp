@@ -2,7 +2,6 @@ package com.santhosh.moviesteamingapp.adapters
 
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,8 +10,6 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.santhosh.moviesteamingapp.Data
-import com.santhosh.moviesteamingapp.DescriptionFragment
 import com.santhosh.moviesteamingapp.MoviesinfoActivity
 import com.santhosh.moviesteamingapp.R
 import com.santhosh.moviesteamingapp.model.HomeModelClass

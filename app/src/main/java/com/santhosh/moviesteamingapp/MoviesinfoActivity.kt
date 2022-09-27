@@ -49,19 +49,25 @@ class MoviesinfoActivity : AppCompatActivity() {
         viewPager.adapter = adapter
 
 
-
-
-
-
         Glide.with(this@MoviesinfoActivity)
             .load(intent.getStringExtra("image"))
-            .override(1200, 500)
+            .override(1200, 700)
             .centerCrop()
             .into(movieImage);
         movieName.text = intent.getStringExtra("name")
         genre.text = intent.getStringExtra("genre")
         year.text = intent.getStringExtra("year")
         runtime.text = intent.getStringExtra("runtime")
+        var description = intent.getStringExtra("description")
+
+        var bundle = Bundle()
+        bundle.putString("description",description)
+        val descriptionFragment = DescriptionFragment()
+        descriptionFragment.arguments = bundle
+
+
+
+
 
 
 

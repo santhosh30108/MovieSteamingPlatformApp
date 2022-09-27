@@ -17,7 +17,7 @@ class DescriptionFragment : Fragment() {
         val view:View = inflater.inflate(R.layout.fragment_description, container, false)
         var fragmentDescription:TextView = view.findViewById(R.id.Description)
 
-
+        fragmentDescription.text = arguments?.getString("description").toString()
 
         return view
     }

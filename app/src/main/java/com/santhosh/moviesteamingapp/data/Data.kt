@@ -1,4 +1,4 @@
-package com.santhosh.moviesteamingapp
+package com.santhosh.moviesteamingapp.data
 
 class Data {
     var description = hashMapOf<String,String>()
