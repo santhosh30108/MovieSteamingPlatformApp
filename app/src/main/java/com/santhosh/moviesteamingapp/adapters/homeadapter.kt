@@ -37,7 +37,7 @@ class homeadapter(var listItems: ArrayList<HomeModelClass>, var context: Context
 
         Glide.with(context)
             .load(listItems[position].image)
-            .override(1200, 500)
+            .override(1300, 600)
             .centerCrop()
             .into(holder.image);
 
