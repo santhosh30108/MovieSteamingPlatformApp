@@ -5,12 +5,13 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
         <entry key="app/src/main/res/layout/activity_moviesinfo.xml" value="0.20520833333333333" />
-        <entry key="app/src/main/res/layout/castfragment.xml" value="0.21927083333333333" />
+        <entry key="app/src/main/res/layout/castfragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_cast.xml" value="0.21927083333333333" />
         <entry key="app/src/main/res/layout/fragment_description.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_images.xml" value="0.20520833333333333" />
         <entry key="app/src/main/res/layout/fragment_trailer.xml" value="0.20520833333333333" />
         <entry key="app/src/main/res/layout/homepage_items.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/trailersfragment.xml" value="0.21822916666666667" />
       </map>
     </option>
   </component>

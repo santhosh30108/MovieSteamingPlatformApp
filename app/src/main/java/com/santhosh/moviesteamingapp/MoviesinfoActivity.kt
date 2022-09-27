@@ -1,9 +1,13 @@
 package com.santhosh.moviesteamingapp
 
+import android.app.ProgressDialog
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.VideoView
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.bumptech.glide.Glide
@@ -20,6 +24,7 @@ class MoviesinfoActivity : AppCompatActivity() {
     lateinit var runtime:TextView
     lateinit var year:TextView
     lateinit var adapter:fragmentsAdapter
+    lateinit var videoView: VideoView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +37,9 @@ class MoviesinfoActivity : AppCompatActivity() {
         genre = findViewById(R.id.genreActivity2)
         runtime = findViewById(R.id.runtimeActivity2)
         year = findViewById(R.id.yearActivity2)
+
+
+
 
 
         tablayout.setupWithViewPager(viewPager)

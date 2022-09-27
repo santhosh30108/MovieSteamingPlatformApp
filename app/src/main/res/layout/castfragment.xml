@@ -31,6 +31,7 @@
             android:layout_marginStart="2dp"
             android:gravity="center"
             android:text="Charecter Name"
+            android:textSize="16sp"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@+id/actorImage"
             app:layout_constraintTop_toBottomOf="@+id/actorName" />
