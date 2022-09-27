@@ -17,7 +17,7 @@
 
         <ImageView
             android:id="@+id/actorImage"
-            android:layout_width="180dp"
+            android:layout_width="160dp"
             android:layout_height="151dp"
             android:scaleType="fitXY"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,19 +26,19 @@
 
         <TextView
             android:id="@+id/charecterName"
-            android:layout_width="180dp"
+            android:layout_width="160dp"
             android:layout_height="30dp"
             android:layout_marginStart="2dp"
             android:gravity="center"
             android:text="Charecter Name"
-            android:textSize="16sp"
             android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/actorImage"
             app:layout_constraintTop_toBottomOf="@+id/actorName" />
 
         <TextView
             android:id="@+id/actorName"
-            android:layout_width="0dp"
+            android:layout_width="160dp"
             android:layout_height="30dp"
             android:gravity="center"
             android:text="Name"

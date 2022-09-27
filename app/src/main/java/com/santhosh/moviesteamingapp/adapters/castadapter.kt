@@ -28,7 +28,7 @@ class castadapter(var listItems: ArrayList<CastPageModel>, var context: Context)
 
         Glide.with(context)
             .load(listItems[position].image)
-            .override(1300, 1200)
+            .override(1300, 1250)
             .centerCrop()
             .into(holder.image);
 
