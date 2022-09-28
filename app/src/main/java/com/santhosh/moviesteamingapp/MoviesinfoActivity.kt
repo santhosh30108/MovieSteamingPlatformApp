@@ -42,12 +42,14 @@ class MoviesinfoActivity : AppCompatActivity() {
 
         val description = intent.getStringExtra("description")
         castList = intent.getSerializableExtra("castList") as ArrayList<CastPageModel>
+        val imageFrag1 = intent.getStringExtra("imageFrag1")
+        val imageFrag2 = intent.getStringExtra("imageFrag2")
         tablayout.setupWithViewPager(viewPager)
         adapter = fragmentsAdapter(supportFragmentManager,FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
         description?.let { DescriptionFragment(it) }?.let { adapter.addFragment(it,"STORYLINE") }
         adapter.addFragment(CastFragment(castList),"CAST")
         adapter.addFragment(TrailerFragment(),"TRAILERS")
-        adapter.addFragment(ImagesFragment(),"IMAGES")
+        adapter.addFragment(ImagesFragment(imageFrag1!!,imageFrag2!!),"IMAGES")
         viewPager.adapter = adapter
 
 

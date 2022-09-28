@@ -14,7 +14,7 @@ import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 
 
-class ImagesFragment : Fragment() {
+class ImagesFragment(var imageFrag1:String, var imageFrag2:String) : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,7 +26,7 @@ class ImagesFragment : Fragment() {
         var imageView:ImageView = view.findViewById(R.id.images1)
         context?.let {
             Glide.with(it)
-                .load("https://cdn.arstechnica.net/wp-content/uploads/2018/03/InfinityWarAvengers-1.jpg")
+                .load(imageFrag1)
                 .override(1200, 700)
                 .centerCrop()
                 .into(imageView)
@@ -35,7 +35,7 @@ class ImagesFragment : Fragment() {
         var imageView2:ImageView = view.findViewById(R.id.images2)
         context?.let {
             Glide.with(it)
-                .load("https://www.hollywoodreporter.com/wp-content/uploads/2017/07/dfhc4lvvwaamtxx_-_h_2017.jpg?w=1296")
+                .load(imageFrag2)
                 .override(1200, 700)
                 .centerCrop()
                 .into(imageView2)

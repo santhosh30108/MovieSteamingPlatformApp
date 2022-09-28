@@ -51,6 +51,8 @@ class homeadapter(var listItems: ArrayList<HomeModelClass>, var context: Context
             intent.putExtra("genre",listItems[position].genre)
             intent.putExtra("description",listItems[position].description)
             intent.putExtra("castList",listItems[position].castList)
+            intent.putExtra("imageFrag1",listItems[position].imageFrag1)
+            intent.putExtra("imageFrag2",listItems[position].imageFrag2)
 
             context.startActivity(intent)
         }

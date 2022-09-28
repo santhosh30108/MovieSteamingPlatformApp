@@ -11,7 +11,9 @@ data class HomeModelClass(
      var year: String,
      var genre:String,
      var description:String,
-     var castList : ArrayList<CastPageModel>
+     var castList : ArrayList<CastPageModel>,
+     var imageFrag1:String,
+     var imageFrag2: String
 ) {
 
 
