@@ -50,6 +50,7 @@ class homeadapter(var listItems: ArrayList<HomeModelClass>, var context: Context
             intent.putExtra("language",listItems[position].language)
             intent.putExtra("genre",listItems[position].genre)
             intent.putExtra("description",listItems[position].description)
+            intent.putExtra("castList",listItems[position].castList)
 
             context.startActivity(intent)
         }

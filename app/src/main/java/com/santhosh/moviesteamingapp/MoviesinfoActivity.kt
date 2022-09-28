@@ -13,6 +13,7 @@ import androidx.viewpager.widget.ViewPager
 import com.bumptech.glide.Glide
 import com.google.android.material.tabs.TabLayout
 import com.santhosh.moviesteamingapp.adapters.fragmentsAdapter
+import com.santhosh.moviesteamingapp.model.CastPageModel
 
 class MoviesinfoActivity : AppCompatActivity() {
 
@@ -25,6 +26,7 @@ class MoviesinfoActivity : AppCompatActivity() {
     lateinit var year:TextView
     lateinit var adapter:fragmentsAdapter
     lateinit var videoView: VideoView
+    var castList = ArrayList<CastPageModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,14 +40,12 @@ class MoviesinfoActivity : AppCompatActivity() {
         runtime = findViewById(R.id.runtimeActivity2)
         year = findViewById(R.id.yearActivity2)
 
-
-
-
-
+        val description = intent.getStringExtra("description")
+        castList = intent.getSerializableExtra("castList") as ArrayList<CastPageModel>
         tablayout.setupWithViewPager(viewPager)
         adapter = fragmentsAdapter(supportFragmentManager,FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
-        adapter.addFragment(DescriptionFragment(),"DESCRIPTION")
-        adapter.addFragment(CastFragment(),"CAST")
+        description?.let { DescriptionFragment(it) }?.let { adapter.addFragment(it,"STORYLINE") }
+        adapter.addFragment(CastFragment(castList),"CAST")
         adapter.addFragment(TrailerFragment(),"TRAILERS")
         adapter.addFragment(ImagesFragment(),"IMAGES")
         viewPager.adapter = adapter
