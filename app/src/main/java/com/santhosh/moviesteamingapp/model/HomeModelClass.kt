@@ -10,7 +10,8 @@ data class HomeModelClass(
      var description:String,
      var castList : ArrayList<CastPageModel>,
      var imageFrag1:String,
-     var imageFrag2: String
+     var imageFrag2: String,
+     var trailerList :ArrayList<TrailerPageModel>
 ) {
 
 }

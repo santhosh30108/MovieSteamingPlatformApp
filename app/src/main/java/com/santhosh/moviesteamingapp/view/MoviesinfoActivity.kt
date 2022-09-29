@@ -15,6 +15,7 @@ import com.santhosh.moviesteamingapp.fragments.DescriptionFragment
 import com.santhosh.moviesteamingapp.fragments.ImagesFragment
 import com.santhosh.moviesteamingapp.fragments.TrailerFragment
 import com.santhosh.moviesteamingapp.model.CastPageModel
+import com.santhosh.moviesteamingapp.model.TrailerPageModel
 
 class MoviesinfoActivity : AppCompatActivity() {
 
@@ -27,6 +28,7 @@ class MoviesinfoActivity : AppCompatActivity() {
     lateinit var year:TextView
     lateinit var adapter:fragmentsAdapter
     var castList = ArrayList<CastPageModel>()
+    var trailerList = ArrayList<TrailerPageModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,13 +44,14 @@ class MoviesinfoActivity : AppCompatActivity() {
 
         val description = intent.getStringExtra("description")
         castList = intent.getSerializableExtra("castList") as ArrayList<CastPageModel>
+        trailerList = intent.getSerializableExtra("trailerList") as ArrayList<TrailerPageModel>
         val imageFrag1 = intent.getStringExtra("imageFrag1")
         val imageFrag2 = intent.getStringExtra("imageFrag2")
         tablayout.setupWithViewPager(viewPager)
         adapter = fragmentsAdapter(supportFragmentManager,FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
         description?.let { DescriptionFragment(it) }?.let { adapter.addFragment(it,"STORYLINE") }
         adapter.addFragment(CastFragment(castList),"CAST")
-        adapter.addFragment(TrailerFragment(),"TRAILERS")
+        adapter.addFragment(TrailerFragment(trailerList),"TRAILERS")
         adapter.addFragment(ImagesFragment(imageFrag1!!,imageFrag2!!),"IMAGES")
         viewPager.adapter = adapter
 

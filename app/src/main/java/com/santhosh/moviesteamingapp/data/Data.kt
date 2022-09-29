@@ -2,6 +2,7 @@ package com.santhosh.moviesteamingapp.data
 
 import com.santhosh.moviesteamingapp.model.CastPageModel
 import com.santhosh.moviesteamingapp.model.HomeModelClass
+import com.santhosh.moviesteamingapp.model.TrailerPageModel
 
 class Data {
     var avengerCastList = ArrayList<CastPageModel>()
@@ -14,6 +15,15 @@ class Data {
     var vikramCastList = ArrayList<CastPageModel>()
     var description = HashMap<String,String>()
     var listItems = ArrayList<HomeModelClass>()
+
+    var avengerTrailerList = ArrayList<TrailerPageModel>()
+    var rrrTrailerList = ArrayList<TrailerPageModel>()
+    var strangeTrailerList = ArrayList<TrailerPageModel>()
+    var sherlockTrailerList = ArrayList<TrailerPageModel>()
+    var spideyTrailerList = ArrayList<TrailerPageModel>()
+    var kgf2TrailerList = ArrayList<TrailerPageModel>()
+    var brahmastraTrailerList = ArrayList<TrailerPageModel>()
+    var vikramTrailerList = ArrayList<TrailerPageModel>()
 
     fun avengersCastList():ArrayList<CastPageModel>{
         avengerCastList.add(CastPageModel("https://media1.popsugar-assets.com/files/thumbor/msjEO8oq7PWud7pFv_Cm6GR6E-U/0x1:2771x2772/fit-in/500x500/filters:format_auto-!!-:strip_icc-!!-/2020/03/30/878/n/1922398/eb11f12e5e825104ca01c1.02079643_/i/Robert-Downey-Jr.jpg","Robert Downey Jr.","Iron Man"))
@@ -115,15 +125,63 @@ class Data {
         return description
     }
 
+    fun avengerTrailersList():ArrayList<TrailerPageModel>{
+        avengerTrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=QwievZ1Tx-8","https://i.ytimg.com/vi/QwievZ1Tx-8/maxresdefault.jpg","Marvel Studios' Avengers: Infinity War - Official Trailer"))
+        avengerTrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=6ZfuNTqbHE8","https://i.ytimg.com/vi/6ZfuNTqbHE8/maxresdefault.jpg","Marvel Studios' Avengers: Infinity War Official Trailer"))
+        return avengerTrailerList
+    }
+
+    fun rrrTrailersList():ArrayList<TrailerPageModel>{
+        rrrTrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=BN1MwXUR3PM","https://i.ytimg.com/vi/BN1MwXUR3PM/maxresdefault.jpg","Ramaraju For Bheem - Bheem Intro - RRR (Telugu) | NTR, Ram Charan, Ajay Devgn, Alia | SS Rajamouli"))
+        rrrTrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=2_BkCz3OnlY","https://i.ytimg.com/vi/2_BkCz3OnlY/maxresdefault.jpg","Bheem For Ramaraju - Ramaraju Intro - RRR(Telugu) | NTR, Ram Charan, Ajay Devgn | SS Rajamouli"))
+        rrrTrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=NgBoMJy386M","https://i.ytimg.com/vi/NgBoMJy386M/maxresdefault.jpg","RRR Trailer (Telugu) - NTR, Ram Charan, Ajay Devgn, Alia Bhatt | SS Rajamouli | 25th March 2022"))
+        return rrrTrailerList
+    }
+
+    fun strangeTrailersList():ArrayList<TrailerPageModel>{
+        strangeTrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=Lt-U_t2pUHI","https://i.ytimg.com/vi/Lt-U_t2pUHI/maxresdefault.jpg","Marvel's Doctor Strange Teaser Trailer"))
+        strangeTrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=HSzx-zryEgM","https://wallpaperaccess.com/full/621125.jpg","Doctor Strange Official Trailer 2"))
+        return strangeTrailerList
+    }
+
+    fun sherlockTrailersList():ArrayList<TrailerPageModel>{
+        sherlockTrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=iKUzhzustok","https://i.ytimg.com/vi/iKUzhzustok/maxresdefault.jpg","Sherlock Holmes Trailer # 1"))
+        return sherlockTrailerList
+    }
+
+    fun spideyTrailersList():ArrayList<TrailerPageModel>{
+        spideyTrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=rt-2cxAiPJk","https://i.ytimg.com/vi/rt-2cxAiPJk/maxresdefault.jpg","SPIDER-MAN: NO WAY HOME - Official Teaser Trailer (HD)"))
+        spideyTrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=JfVOs4VSpmA","https://i.ytimg.com/vi/JfVOs4VSpmA/maxresdefault.jpg","SPIDER-MAN: NO WAY HOME - Official Trailer (HD)"))
+        return spideyTrailerList
+    }
+
+    fun kgf2TrailersList():ArrayList<TrailerPageModel>{
+        kgf2TrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=Qah9sSIXJqk","https://i.ytimg.com/vi/Qah9sSIXJqk/mqdefault.jpg","KGF Chapter2 TEASER |Yash|Sanjay Dutt|Raveena Tandon|Srinidhi Shetty|Prashanth Neel|Vijay Kiragandur"))
+        kgf2TrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=jQsE85cI384","https://i.ytimg.com/vi/jQsE85cI384/maxresdefault.jpg","KGF Chapter 2 Trailer | Kannada |Yash|Sanjay Dutt|Raveena|Srinidhi|Prashanth Neel|Vijay Kiragandur"))
+        return kgf2TrailerList
+    }
+
+    fun brahmastraTrailersList():ArrayList<TrailerPageModel>{
+        brahmastraTrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=XcCWBRqWmyw","https://i.ytimg.com/vi/XcCWBRqWmyw/maxresdefault.jpg","BRAHMĀSTRA Part One: Shiva | Official Motion Poster | Ayan Mukerji"))
+        brahmastraTrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=V5jVntRVl-0","https://i.ytimg.com/vi/V5jVntRVl-0/maxresdefault.jpg","BRAHMĀSTRA OFFICIAL TRAILER 4K | Hindi | Amitabh | Ranbir | Alia | Ayan"))
+        return brahmastraTrailerList
+    }
+
+    fun vikramTrailersList():ArrayList<TrailerPageModel>{
+        vikramTrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=NXSigiaZ0W0","https://cdn.telugu.yousay.tv/wp-content/uploads/sites/2/2022/06/04081141/vik-1.jpeg","VIKRAM - Official Title Teaser | #KamalHaasan232 | Kamal Haasan | Lokesh Kanagaraj | Anirudh"))
+        vikramTrailerList.add(TrailerPageModel("https://www.youtube.com/watch?v=OKBMCL-frPU","https://i.ytimg.com/vi/OKBMCL-frPU/maxresdefault.jpg","VIKRAM - Official Trailer | Kamal Haasan | VijaySethupathi, FahadhFaasil | LokeshKanagaraj | Anirudh"))
+        return vikramTrailerList
+    }
+
     fun movieItems():ArrayList<HomeModelClass>{
-        listItems.add(HomeModelClass("En/US","2h 29m","https://www.themoviedb.org/t/p/w1066_and_h600_bestv2/mDfJG3LC3Dqb67AZ52x3Z0jU0uB.jpg","Avengers Infinity War","2018","Action/Sci-fi", descriptions().get("Avengers Infinity War").toString(),avengersCastList(),"https://cdn.arstechnica.net/wp-content/uploads/2018/03/InfinityWarAvengers-1.jpg","https://www.hollywoodreporter.com/wp-content/uploads/2017/07/dfhc4lvvwaamtxx_-_h_2017.jpg?w=1296"))
-        listItems.add(HomeModelClass("Te/IN","3h 2m","https://akm-img-a-in.tosshub.com/indiatoday/images/story/202203/FOwlLrrVsAIMEi7_1200x768.jpeg?g3RtPp6qzlhsHX55xqF3VJGysEyDBlZ2&size=770:433","RRR","2022","Action/Drama", descriptions().get("RRR").toString(),rrrCastsList(),"https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/06/Ram-Charan-RRR-feature.jpg","https://static01.nyt.com/images/2022/04/05/arts/rrr4/merlin_205052391_46430411-aa97-45b4-b0a3-72ef8b593d40-videoSixteenByNine3000.jpg"))
-        listItems.add(HomeModelClass("En/US","1h 55m","https://www.themoviedb.org/t/p/w1066_and_h600_bestv2/qUv51IFUvVRAP2379ThmA3eLJx6.jpg","Doctor Strange","2016","Action/Adventure", descriptions().get("Doctor Strange").toString(),strangeCastsList(),"https://static1.srcdn.com/wordpress/wp-content/uploads/2020/12/Doctor-strange-Avengers-Infinity-War-sorceror-supreme.jpg","https://static1.dualshockersimages.com/wordpress/wp-content/uploads/2022/05/Marvel-Stories-in-which-Doctor-Strange-was-villain.jpeg"))
-        listItems.add(HomeModelClass("En/US","2h 09m","https://www.themoviedb.org/t/p/w1066_and_h600_bestv2/veXdzn7LL0bFIDGmE7tTkvRg0qV.jpg","Sherlock Holmes","2009","Crime", descriptions().get("Sherlock Holmes").toString(),sherlockCastsList(),"https://img.ilgcdn.com/sites/default/files/styles/xl/public/foto/2018/06/19/1529430934-sherlock-holmes.jpg?_=1529430934","https://media.timeout.com/images/50929/image.jpg"))
-        listItems.add(HomeModelClass("En/US","2h 37m","https://images.indianexpress.com/2021/11/spider-man-no-way-home-new-poster-1200.jpg","Spider-Man: No Way Home","2021","Action/Adventure", descriptions().get("Spider-Man: No Way Home").toString(),spideyCastsList(),"https://m.media-amazon.com/images/M/MV5BNzgwNTVjYWQtNTY3YS00NzIzLTg1ZDAtYTA5MDNkNWZhZjA5XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg","https://variety.com/wp-content/uploads/2021/08/spiderman-3.jpg"))
-        listItems.add(HomeModelClass("Kn/IN","2h 48m","https://www.bollywoodhungama.com/wp-content/uploads/2022/04/K.G.F-%E2%80%93-Chapter-2-15.jpg","K.G.F: Chapter 2","2022","Action/Drama", descriptions().get("K.G.F: Chapter 2").toString(),kgf2CastsList(),"https://igimages.gumlet.io/tamil/home/kgf2280721_1.jpg?w=376&dpr=2.6","https://www.koimoi.com/wp-content/new-galleries/2022/05/kgf-chapter-2-crosses-1200-crores-globally-0001.jpg"))
-        listItems.add(HomeModelClass("Hi/IN","2h 47m","https://i.ytimg.com/vi/bweRG6WueuM/maxresdefault.jpg","Brahmāstra: Part One – Shiva","2022","Fantasy/Adventure", descriptions().get("Brahmāstra: Part One – Shiva").toString(),brahmastraCastsList(),"https://s01.sgp1.cdn.digitaloceanspaces.com/article/179585-txqrxkrytn-1662571565.jpg","https://cdn.telanganatoday.com/wp-content/uploads/2021/12/Brahmastra.jpg"))
-        listItems.add(HomeModelClass("Ta/IN","2h 53m","https://www.koimoi.com/wp-content/new-galleries/2022/05/may-15-audio-release-to-kick-off-buildup-for-kamal-haasan-starrer-vikram-001.jpg","Vikram","2022","Action/Mystery", descriptions().get("Vikram").toString(),vikramCastsList(),"https://resizing.flixster.com/To5a4JmWdugSRb4GCNMx9QsXE2k=/740x380/v2/https://statcdn.fandango.com/MPX/image/NBCU_Fandango/855/203/thumb_69959FD2-7556-4034-9FAD-676685F42179.jpg","https://d2jo35ozacw6sq.cloudfront.net/wp-content/uploads/2022/06/Suriya-in-Vikram-Movie.jpg"))
+        listItems.add(HomeModelClass("En/US","2h 29m","https://www.themoviedb.org/t/p/w1066_and_h600_bestv2/mDfJG3LC3Dqb67AZ52x3Z0jU0uB.jpg","Avengers Infinity War","2018","Action/Sci-fi", descriptions().get("Avengers Infinity War").toString(),avengersCastList(),"https://cdn.arstechnica.net/wp-content/uploads/2018/03/InfinityWarAvengers-1.jpg","https://www.hollywoodreporter.com/wp-content/uploads/2017/07/dfhc4lvvwaamtxx_-_h_2017.jpg?w=1296",avengerTrailersList()))
+        listItems.add(HomeModelClass("Te/IN","3h 2m","https://i.ytimg.com/vi/lDVQojLPI4Y/maxresdefault.jpg","RRR","2022","Action/Drama", descriptions().get("RRR").toString(),rrrCastsList(),"https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/06/Ram-Charan-RRR-feature.jpg","https://static01.nyt.com/images/2022/04/05/arts/rrr4/merlin_205052391_46430411-aa97-45b4-b0a3-72ef8b593d40-videoSixteenByNine3000.jpg",rrrTrailersList()))
+        listItems.add(HomeModelClass("En/US","1h 55m","https://www.themoviedb.org/t/p/w1066_and_h600_bestv2/qUv51IFUvVRAP2379ThmA3eLJx6.jpg","Doctor Strange","2016","Action/Adventure", descriptions().get("Doctor Strange").toString(),strangeCastsList(),"https://static1.srcdn.com/wordpress/wp-content/uploads/2020/12/Doctor-strange-Avengers-Infinity-War-sorceror-supreme.jpg","https://static1.dualshockersimages.com/wordpress/wp-content/uploads/2022/05/Marvel-Stories-in-which-Doctor-Strange-was-villain.jpeg",strangeTrailersList()))
+        listItems.add(HomeModelClass("En/US","2h 09m","https://www.themoviedb.org/t/p/w1066_and_h600_bestv2/veXdzn7LL0bFIDGmE7tTkvRg0qV.jpg","Sherlock Holmes","2009","Crime", descriptions().get("Sherlock Holmes").toString(),sherlockCastsList(),"https://img.ilgcdn.com/sites/default/files/styles/xl/public/foto/2018/06/19/1529430934-sherlock-holmes.jpg?_=1529430934","https://media.timeout.com/images/50929/image.jpg",sherlockTrailersList()))
+        listItems.add(HomeModelClass("En/US","2h 37m","https://images.indianexpress.com/2021/11/spider-man-no-way-home-new-poster-1200.jpg","Spider-Man: No Way Home","2021","Action/Adventure", descriptions().get("Spider-Man: No Way Home").toString(),spideyCastsList(),"https://m.media-amazon.com/images/M/MV5BNzgwNTVjYWQtNTY3YS00NzIzLTg1ZDAtYTA5MDNkNWZhZjA5XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg","https://variety.com/wp-content/uploads/2021/08/spiderman-3.jpg",spideyTrailersList()))
+        listItems.add(HomeModelClass("Kn/IN","2h 48m","https://www.bollywoodhungama.com/wp-content/uploads/2022/04/K.G.F-%E2%80%93-Chapter-2-15.jpg","K.G.F: Chapter 2","2022","Action/Drama", descriptions().get("K.G.F: Chapter 2").toString(),kgf2CastsList(),"https://igimages.gumlet.io/tamil/home/kgf2280721_1.jpg?w=376&dpr=2.6","https://www.koimoi.com/wp-content/new-galleries/2022/05/kgf-chapter-2-crosses-1200-crores-globally-0001.jpg",kgf2TrailersList()))
+        listItems.add(HomeModelClass("Hi/IN","2h 47m","https://i.ytimg.com/vi/bweRG6WueuM/maxresdefault.jpg","Brahmāstra: Part One – Shiva","2022","Fantasy/Adventure", descriptions().get("Brahmāstra: Part One – Shiva").toString(),brahmastraCastsList(),"https://s01.sgp1.cdn.digitaloceanspaces.com/article/179585-txqrxkrytn-1662571565.jpg","https://cdn.telanganatoday.com/wp-content/uploads/2021/12/Brahmastra.jpg",brahmastraTrailersList()))
+        listItems.add(HomeModelClass("Ta/IN","2h 53m","https://www.koimoi.com/wp-content/new-galleries/2022/05/may-15-audio-release-to-kick-off-buildup-for-kamal-haasan-starrer-vikram-001.jpg","Vikram","2022","Action/Mystery", descriptions().get("Vikram").toString(),vikramCastsList(),"https://resizing.flixster.com/To5a4JmWdugSRb4GCNMx9QsXE2k=/740x380/v2/https://statcdn.fandango.com/MPX/image/NBCU_Fandango/855/203/thumb_69959FD2-7556-4034-9FAD-676685F42179.jpg","https://d2jo35ozacw6sq.cloudfront.net/wp-content/uploads/2022/06/Suriya-in-Vikram-Movie.jpg",vikramTrailersList()))
         return listItems
     }
 }

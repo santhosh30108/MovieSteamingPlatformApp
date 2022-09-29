@@ -1,32 +1,28 @@
 package com.santhosh.moviesteamingapp.fragments
 
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.MediaController
-import android.widget.VideoView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.santhosh.moviesteamingapp.R
+import com.santhosh.moviesteamingapp.adapters.trailerAdapter
+import com.santhosh.moviesteamingapp.model.TrailerPageModel
 
-class TrailerFragment : Fragment() {
-    lateinit var videoView:VideoView
+class TrailerFragment(var trailerList : ArrayList<TrailerPageModel>) : Fragment() {
+    lateinit var recyclerView: RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view:View = inflater.inflate(R.layout.fragment_trailer, container, false)
-        videoView = view.findViewById(R.id.videoView)
-        var url = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4"
-        val uri = Uri.parse(url)
-        videoView.setVideoURI(uri)
-        val mediaController = MediaController(context)
-        mediaController.setAnchorView(videoView);
-        mediaController.setMediaPlayer(videoView);
-        videoView.setMediaController(mediaController);
-        videoView.start()
+        recyclerView = view.findViewById(R.id.trailerRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(view.context)
+        val adapter = trailerAdapter(trailerList,view.context)
+        recyclerView.adapter  = adapter
         return view
     }
 
