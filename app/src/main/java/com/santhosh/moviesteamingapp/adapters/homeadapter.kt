@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.santhosh.moviesteamingapp.MoviesinfoActivity
+import com.santhosh.moviesteamingapp.view.MoviesinfoActivity
 import com.santhosh.moviesteamingapp.R
 import com.santhosh.moviesteamingapp.model.HomeModelClass
 
@@ -40,7 +40,7 @@ class homeadapter(var listItems: ArrayList<HomeModelClass>, var context: Context
         holder.language.text = listItems[position].language
         holder.runtime.text = listItems[position].runtime
         holder.cardView.setOnClickListener {
-            var intent = Intent(context,MoviesinfoActivity::class.java)
+            var intent = Intent(context, MoviesinfoActivity::class.java)
             intent.putExtra("image",listItems[position].image)
             intent.putExtra("name",listItems[position].name)
             intent.putExtra("year",listItems[position].year)

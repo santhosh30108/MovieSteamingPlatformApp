@@ -1,15 +1,19 @@
-package com.santhosh.moviesteamingapp
+package com.santhosh.moviesteamingapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.VideoView
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.bumptech.glide.Glide
 import com.google.android.material.tabs.TabLayout
+import com.santhosh.moviesteamingapp.R
 import com.santhosh.moviesteamingapp.adapters.fragmentsAdapter
+import com.santhosh.moviesteamingapp.fragments.CastFragment
+import com.santhosh.moviesteamingapp.fragments.DescriptionFragment
+import com.santhosh.moviesteamingapp.fragments.ImagesFragment
+import com.santhosh.moviesteamingapp.fragments.TrailerFragment
 import com.santhosh.moviesteamingapp.model.CastPageModel
 
 class MoviesinfoActivity : AppCompatActivity() {

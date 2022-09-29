@@ -1,4 +1,4 @@
-package com.santhosh.moviesteamingapp
+package com.santhosh.moviesteamingapp.fragments
 
 import android.net.Uri
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.MediaController
 import android.widget.VideoView
+import com.santhosh.moviesteamingapp.R
 
 class TrailerFragment : Fragment() {
     lateinit var videoView:VideoView

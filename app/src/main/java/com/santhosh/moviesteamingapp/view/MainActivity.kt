@@ -1,14 +1,12 @@
-package com.santhosh.moviesteamingapp
+package com.santhosh.moviesteamingapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.santhosh.moviesteamingapp.R
 import com.santhosh.moviesteamingapp.adapters.homeadapter
 import com.santhosh.moviesteamingapp.data.Data
-import com.santhosh.moviesteamingapp.model.CastPageModel
-import com.santhosh.moviesteamingapp.model.HomeModelClass
-import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 

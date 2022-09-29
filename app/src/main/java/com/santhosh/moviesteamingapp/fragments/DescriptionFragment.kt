@@ -1,4 +1,4 @@
-package com.santhosh.moviesteamingapp
+package com.santhosh.moviesteamingapp.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.santhosh.moviesteamingapp.R
 
 class DescriptionFragment(val description : String) : Fragment() {
     lateinit var fragmentDescription:TextView

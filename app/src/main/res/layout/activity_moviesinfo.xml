@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     app:circularflow_radiusInDP="20dp"
-    tools:context=".MoviesinfoActivity"><![CDATA[
+    tools:context=".view.MoviesinfoActivity"><![CDATA[
 
 
 
