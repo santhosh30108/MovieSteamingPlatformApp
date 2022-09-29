@@ -16,18 +16,23 @@
         android:theme="@style/Theme.MovieSteamingApp"
         tools:targetApi="31">
         <activity
-            android:name=".view.MoviesinfoActivity"
-            android:parentActivityName=".view.MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.MainActivity"
-            android:exported="true">
+            android:name=".view.SplashActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity
+            android:name=".view.MoviesinfoActivity"
+            android:exported="false"
+            android:parentActivityName=".view.MainActivity" />
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="true"
+            android:label="🍿 Movie Streaming App 🍿"/>
     </application>
 
 </manifest>
