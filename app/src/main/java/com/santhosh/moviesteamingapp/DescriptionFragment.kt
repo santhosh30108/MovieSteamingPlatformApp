@@ -1,6 +1,5 @@
 package com.santhosh.moviesteamingapp
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,12 +13,10 @@ class DescriptionFragment(val description : String) : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         val view:View = inflater.inflate(R.layout.fragment_description, container, false)
         fragmentDescription = view.findViewById(R.id.Description)
         fragmentDescription.text = description
         return view
     }
-
 
 }

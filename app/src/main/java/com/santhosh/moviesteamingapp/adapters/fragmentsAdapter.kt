@@ -3,7 +3,6 @@ package com.santhosh.moviesteamingapp.adapters
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.google.android.material.appbar.AppBarLayout
 
 class fragmentsAdapter(fm: FragmentManager, behavior: Int) : FragmentPagerAdapter(fm, behavior) {
 
@@ -25,4 +24,5 @@ class fragmentsAdapter(fm: FragmentManager, behavior: Int) : FragmentPagerAdapte
     override fun getPageTitle(position: Int): CharSequence? {
         return fragmentTitle[position]
     }
+
 }

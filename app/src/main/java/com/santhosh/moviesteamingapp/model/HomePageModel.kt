@@ -1,7 +1,5 @@
 package com.santhosh.moviesteamingapp.model
 
-import org.intellij.lang.annotations.Language
-
 data class HomePageModel (
     var name:String,
     var image:String,

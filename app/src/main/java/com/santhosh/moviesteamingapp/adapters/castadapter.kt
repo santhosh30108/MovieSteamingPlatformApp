@@ -25,13 +25,11 @@ class castadapter(var listItems: ArrayList<CastPageModel>, var context: Context)
 
     override fun onBindViewHolder(holder: castadapterholder, position: Int) {
         holder.name.text = listItems[position].name
-
         Glide.with(context)
             .load(listItems[position].image)
             .override(1300, 1250)
             .centerCrop()
             .into(holder.image);
-
         holder.charectername.text = listItems[position].charecter_name
     }
 

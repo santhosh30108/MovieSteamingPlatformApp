@@ -8,9 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.santhosh.moviesteamingapp.adapters.castadapter
-import com.santhosh.moviesteamingapp.adapters.homeadapter
 import com.santhosh.moviesteamingapp.model.CastPageModel
-import com.santhosh.moviesteamingapp.model.HomeModelClass
 
 class CastFragment(var castList:ArrayList<CastPageModel>) : Fragment() {
 
@@ -19,14 +17,12 @@ class CastFragment(var castList:ArrayList<CastPageModel>) : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view:View = inflater.inflate(R.layout.fragment_cast, container, false)
         recyclerView = view.findViewById(R.id.castRecyclerView)
-
         recyclerView.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
         val adapter = context?.let { castadapter(castList, it) }
         recyclerView.adapter  = adapter
-
         return view
     }
+
 }

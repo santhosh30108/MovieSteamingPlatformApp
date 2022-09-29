@@ -7,4 +7,5 @@ data class CastPageModel (
     var name: String,
     var charecter_name: String
     ): Serializable {
+
 }

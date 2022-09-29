@@ -31,13 +31,11 @@ class homeadapter(var listItems: ArrayList<HomeModelClass>, var context: Context
 
     override fun onBindViewHolder(holder: homeadapterholder, position: Int) {
         holder.movieName.text = listItems[position].name
-
         Glide.with(context)
             .load(listItems[position].image)
             .override(1300, 600)
             .centerCrop()
             .into(holder.image);
-
         holder.year.text = listItems[position].year
         holder.language.text = listItems[position].language
         holder.runtime.text = listItems[position].runtime
@@ -53,14 +51,12 @@ class homeadapter(var listItems: ArrayList<HomeModelClass>, var context: Context
             intent.putExtra("castList",listItems[position].castList)
             intent.putExtra("imageFrag1",listItems[position].imageFrag1)
             intent.putExtra("imageFrag2",listItems[position].imageFrag2)
-
             context.startActivity(intent)
         }
-
-
     }
 
     override fun getItemCount(): Int {
         return listItems.size
     }
+
 }

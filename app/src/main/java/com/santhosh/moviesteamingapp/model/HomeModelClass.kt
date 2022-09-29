@@ -1,8 +1,5 @@
 package com.santhosh.moviesteamingapp.model
 
-import com.santhosh.moviesteamingapp.DescriptionFragment
-
-
 data class HomeModelClass(
      var language: String,
      var runtime: String,
@@ -15,6 +12,5 @@ data class HomeModelClass(
      var imageFrag1:String,
      var imageFrag2: String
 ) {
-
 
 }

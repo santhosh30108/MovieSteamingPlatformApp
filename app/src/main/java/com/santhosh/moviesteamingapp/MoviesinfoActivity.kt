@@ -1,11 +1,8 @@
 package com.santhosh.moviesteamingapp
 
-import android.app.ProgressDialog
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.VideoView
 import androidx.fragment.app.FragmentPagerAdapter
@@ -25,7 +22,6 @@ class MoviesinfoActivity : AppCompatActivity() {
     lateinit var runtime:TextView
     lateinit var year:TextView
     lateinit var adapter:fragmentsAdapter
-    lateinit var videoView: VideoView
     var castList = ArrayList<CastPageModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,7 +48,6 @@ class MoviesinfoActivity : AppCompatActivity() {
         adapter.addFragment(ImagesFragment(imageFrag1!!,imageFrag2!!),"IMAGES")
         viewPager.adapter = adapter
 
-
         Glide.with(this@MoviesinfoActivity)
             .load(intent.getStringExtra("image"))
             .override(1200, 700)
@@ -62,10 +57,6 @@ class MoviesinfoActivity : AppCompatActivity() {
         genre.text = intent.getStringExtra("genre")
         year.text = intent.getStringExtra("year")
         runtime.text = intent.getStringExtra("runtime")
-
-
     }
-
-
 
 }
