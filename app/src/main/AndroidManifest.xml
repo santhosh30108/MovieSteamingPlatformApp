@@ -32,7 +32,7 @@
         <activity
             android:name=".view.MainActivity"
             android:exported="true"
-            android:label="🍿 Movie Streaming App 🍿"/>
+            android:label="Movie Streaming App"/>
     </application>
 
 </manifest>
